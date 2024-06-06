@@ -26,6 +26,8 @@ const post = async<T>(route: string, data?: Record<string, unknown>) => {
 const get = async<T>(route: string, queryParams?: Record<string, unknown>) => {
     try {
         const url = queryParams ? `${route}?${new URLSearchParams(JSON.stringify(queryParams))}` : route;
+
+        console.log(url);
         return await HttpRequest<T>('get', url);
     } catch (error) {
         return {
@@ -85,7 +87,7 @@ const HttpRequest = async<T>(method: HttpMethod, route: string, data?: Record<st
     const config = {
         method: method,
         maxBodyLength: Infinity,
-        url: `http://localhost:3000/${route}`,
+        url: route,
         headers,
         data: data,
     };

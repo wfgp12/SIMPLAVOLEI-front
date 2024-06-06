@@ -1,3 +1,3 @@
 export const rolesEndpoints = {
-    getListRoles: "api/roles"
+    getListRoles: "http://localhost:3000/api/roles"
 }

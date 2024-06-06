@@ -1,4 +1,4 @@
-import { Link, redirect, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { useForm } from "../../hooks/useForm";
 import { RegisterForm } from "../../models/auth";

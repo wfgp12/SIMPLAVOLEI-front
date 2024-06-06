@@ -5,7 +5,7 @@ import http from "../http.service";
 
 export const loginService = async (email: string, password: string) => {
     try {
-        const { status, data, error } = await http.post<LoginResponse>('api/users/login', { email, password });
+        const { status, data, error } = await http.post<LoginResponse>('http://localhost:3000/api/users/login', { email, password });
         if (status === 'error' || !data) throw new Error(error?.message as string);
 
         const {user, token} = data;
@@ -36,7 +36,7 @@ export const registerService = async (newUser: RegisterForm) => {
     })
 
     try {
-        const { status, data, error } = await http.post<RegisterResponse>('api/users', {...user, password: newUser.password, confirmPassword: newUser.confirmPassword});
+        const { status, data, error } = await http.post<RegisterResponse>('http://localhost:3000/api/users', {...user, password: newUser.password, confirmPassword: newUser.confirmPassword});
         console.log(status, data, error);
         if (status === 'error' || !data) throw new Error(error?.message as string);
 
@@ -48,7 +48,7 @@ export const registerService = async (newUser: RegisterForm) => {
 
 export const validateTokenSession = async () => {
     try {
-        const { status, data, error } = await http.post<validateTokenResponse>('api/user/validate-token');
+        const { status, data, error } = await http.post<validateTokenResponse>('http://localhost:3000/api/user/validate-token');
         if (status === 'error' || !data) throw new Error(error?.message as string);
 
         const {user} = data;
