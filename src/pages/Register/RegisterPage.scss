@@ -1,0 +1,96 @@
+.RegisterPage {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+
+    &__header {
+        width: 100%;
+        padding: 5px 0;
+
+        &__back {
+            text-decoration: none;
+            color: #566573;
+            font-weight: 500;
+            font-size: 18px;
+            letter-spacing: 2px;
+            transition: all .3s;
+
+            &:hover {
+                font-size: 20px;
+                text-decoration: underline;
+                text-underline-offset: 5px;
+            }
+        }
+    }
+
+    &__form {
+        display: flex;
+        width: 100%;
+        height: calc(100% - 290px);
+        overflow-y: scroll;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        &__field {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        &__label {
+            font-weight: 500;
+            color: #566573;
+            letter-spacing: 5px;
+        }
+
+        &__input {
+            border: 2px solid #F2F4F4;
+            padding: 5px 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        &__select {
+            border: 2px solid #F2F4F4;
+            margin: 10px 0;
+            border-radius: 8px;
+
+            >div>span {
+                font-family: Poppins;
+                font-weight: 200;
+                letter-spacing: 1.3px;
+                color: var(--color-spun-pearl);
+            }
+        }
+
+        &__date {
+            border: 2px solid #F2F4F4;
+            margin: 10px 0;
+            border-radius: 8px;
+
+            >div>input {
+                font-family: Poppins !important; 
+                font-weight: 200;
+                letter-spacing: 1.3px;
+                color: var(--color-spun-pearl) !important;
+            }
+        }
+
+        &__button {
+            width: 90%;
+            padding: 10px;
+            margin-top: 30px;
+            border-width: 0;
+            background-color: #566573;
+            color: white;
+            font-size: 20px;
+            border-radius: 8px;
+        }
+    }
+}

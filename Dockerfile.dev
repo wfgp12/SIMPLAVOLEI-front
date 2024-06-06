@@ -1,0 +1,10 @@
+FROM node:18.16.1-alpine
+ENV NODE_ENV=local
+RUN apk update
+RUN mkdir -p /server
+WORKDIR /server
+# COPY src/package*.json .
+# RUN yarn install
+# COPY src .
+EXPOSE 3000
+# CMD ["yarn","start"]

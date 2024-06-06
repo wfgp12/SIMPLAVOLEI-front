@@ -1,0 +1,129 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Medium.ttf') format('truetype');
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+:root {
+  font-family: Poppins, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1;
+
+  // color-scheme: light dark;
+  color: var(--color-shuttle-gray);
+  // background-color: #f9f9f9;
+
+  --color-primary: #FCEC37;
+  --color-primary-hv: #e7e005;
+  --color-secondary: #1D348C;
+  --color-secondary-hover: #1677ff;
+  --color-secondary-hv-alpha: #1677ff5e;
+  --color-danger: #FC3727;
+  --color-text-primary: #272833;
+  --color-input-bg: #cfd6dd;
+  --color-input-text: #7C838A;
+  --color-background: #F5F6FA;
+
+  --color-primary-light: #BAADFF;
+  --color-fog: #DBCBFF;
+  --color-shuttle-gray: #566573;
+  --color-gull-gray: #91A0AF;
+  --color-spun-pearl: #ADA9BB;
+  --color-link-water: #D0E0F0;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: var(--color-secondary);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-secondary-hover);
+  }
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  overflow: hidden;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-background);
+}
+
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--color-primary);
+  color: black;
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  &:hover {
+    background-color: var(--color-primary-hv);
+  }
+
+}
+
+input {
+  background-color: var(--color-input-bg);
+  border-radius: 8px;
+  color: var(--color-input-text);
+  border: 2px solid var(--color-input-text);
+  font-family: Poppins;
+  padding: 5px 5px 5px 15px;
+  font-weight: 200;
+  letter-spacing: 1.3px;
+  transition: all .25s ease;
+
+  &:hover {
+    border: 2px solid var(--color-secondary-hover);
+  }
+
+  &:focus-visible {
+    border: 2px solid var(--color-secondary);
+    outline: none;
+  }
+}
+
+
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     color: #213547;
+//     background-color: #ffffff;
+//   }
+
+//   a:hover {
+//     color: #747bff;
+//   }
+
+//   button {
+//     background-color: #f9f9f9;
+//   }
+// }

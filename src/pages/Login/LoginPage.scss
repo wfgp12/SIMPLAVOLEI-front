@@ -1,0 +1,43 @@
+@import '../../index.scss';
+
+.LoginPage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1{
+       color: black; 
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        flex: 1;
+        justify-content: space-evenly;
+        align-items: center;
+
+        &__field {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        &__label {
+            font-weight: 500;
+            color: var(--color-input-text);
+            letter-spacing: 3px;
+        }
+
+        &__input{
+            margin: 10px 0;
+        }
+
+        &__button{
+            padding: 5px 50px;
+            margin: 10px 0;
+        }
+    }
+}

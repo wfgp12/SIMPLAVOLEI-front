@@ -1,0 +1,193 @@
+.protected-layout {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    overflow: hidden;
+    flex-direction: column;
+
+    &__navBar {
+        align-items: center;
+        background-color: var(--color-primary);
+        display: flex;
+        flex-direction: row;
+        height: 60px;
+        justify-content: space-between;
+        padding: 0 10px;
+        position: fixed;
+        top: 0;
+        width: calc(100% - 20px);
+        z-index: 1;
+
+        &__user {
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 20px;
+            color: var(--color-shuttle-gray);
+            font-weight: 500;
+
+            .subtitle {
+                font-size: 14px;
+                color: var(--color-link-water);
+                font-weight: 200;
+            }
+        }
+
+        &__menu {
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        &__burger-container {
+            padding: 5px;
+            border-radius: 5px;
+            // background-color: var(--color-secondary);
+            &:hover{
+                background-color: var(--color-primary-hv);
+            }
+        }
+
+        &__burger {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            background: transparent;
+            cursor: pointer;
+            display: block;
+
+            input {
+                display: none;
+            }
+
+            span {
+                display: block;
+                position: absolute;
+                height: 4px;
+                width: 100%;
+                background: var(--color-secondary);
+                border-radius: 9px;
+                opacity: 1;
+                left: 0;
+                transform: rotate(0deg);
+                transition: .25s ease-in-out;
+
+                &:nth-of-type(1) {
+                    top: 0px;
+                    transform-origin: left center;
+                }
+
+                &:nth-of-type(2) {
+                    top: 50%;
+                    transform: translateY(-50%);
+                    transform-origin: left center;
+                }
+
+                &:nth-of-type(3) {
+                    top: 100%;
+                    transform-origin: left center;
+                    transform: translateY(-100%);
+                }
+            }
+
+            input:checked {
+                ~span:nth-of-type(1) {
+                    transform: rotate(45deg);
+                    top: 2px;
+                    left: 5px;
+                }
+
+                ~span:nth-of-type(2) {
+                    width: 0%;
+                    opacity: 0;
+                }
+
+                ~span:nth-of-type(3) {
+                    transform: rotate(-45deg);
+                    top: 23px;
+                    left: 5px;
+                }
+            }
+        }
+
+    }
+
+    &__container {
+        display: flex;
+        margin-top: 60px;
+        flex: 1;
+        flex-direction: row;
+        overflow: hidden;
+    }
+
+    &__side-bar {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        width: 55px;
+        justify-content: space-between;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        z-index: 1;
+
+        transition: width .2s ease;
+
+        &__menu {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            width: 250px;
+        }
+
+        &__item {
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
+            color: black;
+            font-weight: 500;
+            padding: 15px 15px;
+
+            transition: all .2s ease;
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
+
+            &:hover {
+                background-color: var(--color-secondary-hv-alpha);
+            }
+
+            &--active {
+                letter-spacing: 1.5px;
+                font-weight: bold;
+                color: var(--color-secondary);
+            }
+        }
+
+        &__log-out {
+            background-color: transparent;
+            border-radius: 0;
+            border-top: 2px solid var(--color-shuttle-gray);
+        }
+
+        &--open {
+            width: 250px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        width: 100%;
+        flex: 1;
+        background-color: var(--color-background);
+        justify-content: center;
+        align-items: center;
+    }
+}

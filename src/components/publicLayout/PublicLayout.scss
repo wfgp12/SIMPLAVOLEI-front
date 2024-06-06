@@ -1,0 +1,44 @@
+.PublicLayout {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    flex-direction: row;
+    background-color: var(--color-secondary);
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: calc(100% - 80px);
+        flex: 1;
+        background-color: white;
+        border-radius: 15px 0 0 15px;
+        padding: 40px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .PublicLayout {
+        &__logo{
+            width: 75%;
+            display: grid;
+            place-items: center;
+        }
+        &__content {
+            align-self: flex-end;
+            height: 100%;
+            width: 35%;
+            min-width: 350px;
+            padding: 30px 100px 30px 100px;
+
+            box-shadow:
+                0px 0px 0.8px -4px rgba(0, 0, 0, 0.039),
+                0px 0px 2.5px -4px rgba(0, 0, 0, 0.059),
+                0px 0px 5.8px -4px rgba(0, 0, 0, 0.071),
+                0px 0px 12.1px -4px rgba(0, 0, 0, 0.077),
+                0px 0px 25.2px -4px rgba(0, 0, 0, 0.084),
+                0px 0px 72px -4px rgba(0, 0, 0, 0.11);
+        }
+    }
+}
