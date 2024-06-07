@@ -25,14 +25,14 @@ export const loginService = async (email: string, password: string) => {
 
 export const registerService = async (newUser: RegisterForm) => {
     const user = mapperToUserDAO({
-        id: 0,
+        id: "",
         name: newUser.name,
         lastName: newUser.lastName,
         email: newUser.email,
         documentNumber: newUser.documentNumber,
         dateOfBirth: newUser.dateOfBirth,
         country: newUser.country,
-        roles: [newUser.role]
+        roles: [{id:newUser.role, name:""}]
     })
 
     try {

@@ -22,7 +22,7 @@ export const ProfilePage = () => {
       .catch((err) => {
         console.error(err);
       });
-  }, []);
+  }, [isModalOpen]);
 
   const { values, handleChange, setValue, resetForm } =
     useForm<CreatePlayerForm>({

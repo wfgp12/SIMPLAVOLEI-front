@@ -16,7 +16,7 @@ export const protectedRoutes: IRoute[] = [
     {path:"home", label:"Home", element: <HomePage />, permissions: []},
     {path:"profile", label:"Perfil", element: <ProfilePage />, permissions: ['Jugador']},
     {path:"mi-club", label:"Mi Club", element: <MyClubPage />, permissions: ['Director de club']},
-    {path:"clubes", label:"Clubes", element: <ClubesPage />, permissions: ['Director de club', 'Jugador']},
+    {path:"clubes", label:"Clubes", element: <ClubesPage />, permissions: ['Jugador']},
 ]
 
 export const AppRouter = () => {

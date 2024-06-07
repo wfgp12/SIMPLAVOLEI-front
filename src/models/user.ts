@@ -43,7 +43,7 @@ export function mapperToRoleDTO(RoleDAO: RoleDAO): RoleDTO {
 
 
 export interface UserDTO {
-    id: number;
+    id: string;
     name: string;
     lastName: string;
     email: string;
@@ -64,7 +64,7 @@ export interface RoleDAO {
 }
 
 export interface UserDAO {
-    _id: number;
+    _id: string;
     fullName: string;
     email: string;
     documentNumber: string;

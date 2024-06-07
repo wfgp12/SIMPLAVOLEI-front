@@ -1,0 +1,63 @@
+.clubs-page{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 50px auto;
+    gap: 10px;
+
+    &__header{
+        display: flex;
+        align-items: center;
+        h1{
+            margin: 0;
+            color: black;
+        }
+    }
+
+    &__content{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));;
+    }
+}
+
+.club-cart {
+    background-color: white;
+    height: 230px;
+    padding: 15px 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: grid;
+    row-gap: 10px;
+    grid-template-rows: 55% 50px 30px;
+
+    &__image{
+        background-color: var(--color-background);
+    }
+
+    &__info{
+        color: black;
+        display: flex;
+        flex-direction: column;
+        &__title{
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__actions{
+        display: flex;
+        justify-content: center;
+
+        button{
+            background-color: var(--color-secondary);
+            color: white;
+            padding: 0 30px;
+
+            &:hover{
+                background-color: var(--color-secondary-hover);
+            }
+        }
+    }
+}
